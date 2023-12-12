@@ -79,6 +79,9 @@
 
     <p>Expressing love is showing how much you care, <br>whether through words, actions, or heartfelt moments together.
     </p>
+    <audio id="myAudio">
+        <source src="/audio/1.mp3" type="audio/mp3">
+    </audio>
 
     <script>
         var changedImg = document.getElementById('img');
@@ -86,6 +89,10 @@
         function changeImg() {
             changedImg.setAttribute('src', this.value);
             console.log(this.value);
+            var x = document.getElementById("myAudio"); 
+            if (this.value == "img/1080p.png"){
+                  x.play(); 
+            }
         }
         opt.addEventListener("change", changeImg);
     </script>
